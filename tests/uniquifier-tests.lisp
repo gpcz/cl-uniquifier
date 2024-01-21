@@ -18,6 +18,8 @@
     (fiveam:is (equal 'A1 (funcall q :big-complicated-symbol)))))
 
 (fiveam:test different-uniques
+  "Verifies that different incoming symbols give different outgoing
+   unique symbols."
   (let ((q (cl-uniquifier:make-uniquifier)))
     (fiveam:is (equal 'A1 (funcall q :big-complicated-symbol)))
     (fiveam:is (equal 'A2 (funcall q :big-complicated-symbol2)))
