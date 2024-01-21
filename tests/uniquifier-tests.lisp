@@ -33,4 +33,5 @@
     (fiveam:is (equal 'B1 (funcall q :big-complicated-symbol)))))
 
 (defun run-test-suite ()
+  "Runs the test suite(s) for uniquifier."
   (fiveam:run! 'uniquifier-tests))
