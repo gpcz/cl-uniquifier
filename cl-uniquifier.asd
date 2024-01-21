@@ -1,7 +1,7 @@
 (defsystem "cl-uniquifier"
   :author "Greg Czerniak"
   :description "Produces a function that will return a new simple unique
-                symbol for every symbol or string that is introduced.
+                symbol for every symbol that is introduced.
                 Good for generating files that require simple names for
                 things, code obfuscation, etc."
   :license "MIT"
