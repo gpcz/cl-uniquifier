@@ -5,7 +5,8 @@
                 Good for generating files that require simple names for
                 things, code obfuscation, etc."
   :license "MIT"
-  :version "1.0.0"
+  :version "1.0.1"
+  :depends-on ("bordeaux-threads")
   :pathname "src/"
   :components
   ((:file "package")
