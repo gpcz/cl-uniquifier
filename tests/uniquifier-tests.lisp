@@ -26,6 +26,7 @@
     (fiveam:is (equal 'A1 (funcall q :big-complicated-symbol)))))
 
 (fiveam:test altered-prefix
+  "Tests that the optional functionality of an altered prefix works."
   (let ((q (cl-uniquifier:make-uniquifier "B")))
     (fiveam:is (equal 'B1 (funcall q :big-complicated-symbol)))
     (fiveam:is (equal 'B2 (funcall q :big-complicated-symbol2)))
