@@ -7,6 +7,8 @@
                                   &optional))
                 make-unique-designation))
 (defun make-unique-designation (prefix uniq-counter)
+  "Given simple-string PREFIX and fixnum UNIQ-COUNTER, return
+   a symbol made up of prefix and uniq-counter."
   (intern (format nil "~A~A" prefix uniq-counter)))
 
 ;;; External functions
