@@ -15,6 +15,11 @@
                           (values function &optional))
                 make-uniquifier))
 (defun make-uniquifier (&optional (prefix "A"))
+  "Given optional simple-string PREFIX, generate a function that takes
+   in a symbol and returns another unique symbol.  These symbols will
+   be the same for the same input symbol, but different for different
+   symbols.  Useful for code obfuscation or when you need simplified
+   names as proxies for complicated ones."
   (let ((uniq-hash-table (make-hash-table))
         (uniq-counter 1)
         (uniq-lock (bt:make-lock)))
