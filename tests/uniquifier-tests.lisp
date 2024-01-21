@@ -11,6 +11,8 @@
     (fiveam:is (equal 'A1 (funcall q :big-complicated-symbol)))))
 
 (fiveam:test unique-retrieval
+  "Tests whether the same incoming symbol gives you the same
+   output symbol."
   (let ((q (cl-uniquifier:make-uniquifier)))
     (fiveam:is (equal 'A1 (funcall q :big-complicated-symbol)))
     (fiveam:is (equal 'A1 (funcall q :big-complicated-symbol)))))
