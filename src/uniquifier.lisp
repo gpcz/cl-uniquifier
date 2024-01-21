@@ -21,7 +21,7 @@
     (lambda (the-symbol)
       (bt:with-lock-held (uniq-lock)
         (or (gethash the-symbol uniq-hash-table)
-          (prog1
-              (setf (gethash the-symbol uniq-hash-table)
-                    (make-unique-designation prefix uniq-counter))
-            (incf uniq-counter)))))))
+            (prog1
+                (setf (gethash the-symbol uniq-hash-table)
+                      (make-unique-designation prefix uniq-counter))
+              (incf uniq-counter)))))))
