@@ -5,6 +5,8 @@
 (fiveam:in-suite uniquifier-tests)
 
 (fiveam:test basic-functionality
+  "Tests whether the system is capable of the very least:
+   making one unique symbol."
   (let ((q (cl-uniquifier:make-uniquifier)))
     (fiveam:is (equal 'A1 (funcall q :big-complicated-symbol)))))
 
