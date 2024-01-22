@@ -28,7 +28,7 @@ jobs:
       - name: Download dependency fiveam
         run: cd ../common-lisp && git clone https://github.com/lispci/fiveam
       - name: Get ASDF
-        run: curl -O https://common-lisp.net/project/asdf/archives/asdf.lisp
+        run: curl -O https://asdf.common-lisp.dev/archives/asdf.lisp
       - name: Show me ASDF
         run: cat asdf.lisp
       - name: Run tests
