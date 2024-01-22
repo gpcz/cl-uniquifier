@@ -26,7 +26,7 @@ jobs:
       - name: Download dependency fiveam
         run: cd ../common-lisp && git clone https://github.com/lispci/fiveam
       - name: Download CCL
-        run: curl -O https://github.com/Clozure/ccl/releases/download/v1.12.2/ccl-1.12.2-linuxx86.tar.gz
+        run: curl -LO https://github.com/Clozure/ccl/releases/download/v1.12.2/ccl-1.12.2-linuxx86.tar.gz
       - name: Unpack CCL
         run: tar xf ccl-1.12.2-linuxx86.tar.gz
       - name: Download ASDF
