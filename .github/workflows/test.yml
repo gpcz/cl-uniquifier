@@ -12,7 +12,7 @@ jobs:
       - run: mkdir -p ../common-lisp
       - run: cp -r ../cl-uniquifier ../common-lisp/
       - name: Download dependency Alexandria
-        run: cd ../common-lisp && git clone git://common-lisp.net/projects/alexandria/alexandria.git
+        run: cd ../common-lisp && git clone https://github.com/keithj/alexandria
       - name: Download dependency bordeaux-threads
         run: cd ../common-lisp && git clone https://github.com/sionescu/bordeaux-threads
       - name: Download dependency fiveam
