@@ -13,6 +13,8 @@ jobs:
       - run: cp -r ../cl-uniquifier ../common-lisp/
       - name: Download dependency Alexandria
         run: cd ../common-lisp && git clone https://github.com/keithj/alexandria
+      - name: Download dependency trivial-features
+        run: cd ../common-lisp && git clone https://github.com/trivial-features/trivial-features
       - name: Download dependency global-vars
         run: cd ../common-lisp && git clone https://github.com/lmj/global-vars
       - name: Download dependency bordeaux-threads
