@@ -3,3 +3,14 @@
 
 # cl-uniquifier
 Produces a function that will return a new simple unique symbol for every symbol or string that is introduced.  Good for generating files that require simple names for things, code obfuscation, etc.
+
+## Example
+```
+CL-USER> (let ((uniquifier (cl-uniquifier:make-uniquifier)))
+           (format t "~S~%" (funcall uniquifier :big-long-symbol))
+           (format t "~S~%" (funcall uniquifier :another-big-long-symbol))
+           (format t "~S~%" (funcall uniquifier :big-long-symbol)))
+A1
+A2
+A1
+```
