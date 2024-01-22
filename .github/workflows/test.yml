@@ -15,6 +15,8 @@ jobs:
         run: cd ../common-lisp && git clone https://github.com/keithj/alexandria
       - name: Download dependency trivial-features
         run: cd ../common-lisp && git clone https://github.com/trivial-features/trivial-features
+      - name: Download dependency trivial-garbage
+        run: cd ../common-lisp && git clone https://github.com/trivial-garbage/trivial-garbage
       - name: Download dependency global-vars
         run: cd ../common-lisp && git clone https://github.com/lmj/global-vars
       - name: Download dependency bordeaux-threads
