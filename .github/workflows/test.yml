@@ -1,19 +1,20 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Test cl-uniquifier
+run-name: ${{ github.actor }} is testing cl-uniquifier
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Test-cl-uniquifier:
     runs-on: ubuntu-latest
     steps:
       - name: Install SBCL
         run: sudo apt-get install -y sbcl
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: mkdir -p ../common-lisp
       - run: cp -r ../cl-uniquifier ../common-lisp/
+      - name: Download dependency bordeaux-threads
+        run: cd ../common-lisp && git clone https://github.com/sionescu/bordeaux-threads
+      - name: Download dependency fiveam
+        run: cd ../common-lisp && git clone https://github.com/lispci/fiveam
       - name: Run tests
         run: sbcl --script gh-workflow-runtests.lisp
       - run: echo "🍏 This job's status is ${{ job.status }}."
