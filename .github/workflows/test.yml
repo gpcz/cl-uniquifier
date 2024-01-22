@@ -11,6 +11,8 @@ jobs:
         uses: actions/checkout@v4
       - run: mkdir -p ../common-lisp
       - run: cp -r ../cl-uniquifier ../common-lisp/
+      - name: Download dependency Alexandria
+        run: cd ../common-lisp && git clone git://common-lisp.net/projects/alexandria/alexandria.git
       - name: Download dependency bordeaux-threads
         run: cd ../common-lisp && git clone https://github.com/sionescu/bordeaux-threads
       - name: Download dependency fiveam
