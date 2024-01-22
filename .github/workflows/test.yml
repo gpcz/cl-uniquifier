@@ -13,6 +13,8 @@ jobs:
       - run: cp -r ../cl-uniquifier ../common-lisp/
       - name: Download dependency Alexandria
         run: cd ../common-lisp && git clone https://github.com/keithj/alexandria
+      - name: Download dependency global-vars
+      - run: cd ../common-lisp && git clone https://github.com/lmj/global-vars
       - name: Download dependency bordeaux-threads
         run: cd ../common-lisp && git clone https://github.com/sionescu/bordeaux-threads
       - name: Download dependency fiveam
