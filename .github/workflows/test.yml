@@ -17,6 +17,8 @@ jobs:
         run: cd ../common-lisp && git clone https://github.com/trivial-features/trivial-features
       - name: Download dependency trivial-garbage
         run: cd ../common-lisp && git clone https://github.com/trivial-garbage/trivial-garbage
+      - name: Download dependency asdf-flv
+        run: cd ../common-lisp && git clone https://github.com/didierverna/asdf-flv
       - name: Download dependency global-vars
         run: cd ../common-lisp && git clone https://github.com/lmj/global-vars
       - name: Download dependency bordeaux-threads
