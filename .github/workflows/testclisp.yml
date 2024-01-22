@@ -27,6 +27,8 @@ jobs:
         run: cd ../common-lisp && git clone https://github.com/sionescu/bordeaux-threads
       - name: Download dependency fiveam
         run: cd ../common-lisp && git clone https://github.com/lispci/fiveam
+      - name: Get ASDF
+        run: curl -O https://common-lisp.net/project/asdf/archives/asdf.lisp
       - name: Run tests
-        run: clisp -i gh-workflow-runtests.lisp
+        run: clisp -i asdf.lisp gh-workflow-runtests.lisp
       - run: echo "🍏 This job's status is ${{ job.status }}."
