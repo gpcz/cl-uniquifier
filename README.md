@@ -1,2 +1,4 @@
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 # cl-uniquifier
 Produces a function that will return a new simple unique symbol for every symbol or string that is introduced.  Good for generating files that require simple names for things, code obfuscation, etc.
